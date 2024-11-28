@@ -26,6 +26,8 @@ const Counter: React.FC<CounterProps> = ({ name, targetNumber, onGlobalDecrement
   const handleDecrement = () => {
     if (count > 0) {
       setCount(count - 1);
+    } else if (count === 0) {
+      setTotalRows(prev => Math.max(0, prev - 1));
     }
     onGlobalDecrement();
   };

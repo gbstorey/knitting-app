@@ -20,7 +20,7 @@ interface SaveData {
 const endpoint = "https://sdoz0lvnrf.execute-api.us-east-2.amazonaws.com/default/knitting-app-lambda/hannah.json"
 
 function App() {
-  const [globalCounter, setGlobalCounter] = useState(0);
+  const [globalCounter, setGlobalCounter] = useState(1);
   const [counters, setCounters] = useState<CounterData[]>([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -51,7 +51,7 @@ const saveData = async (data: SaveData) => {
 
 const handleClearCounters = async () => {
   // Reset all states to initial values
-  setGlobalCounter(0);
+  setGlobalCounter(1);
   setCounters([]);
   
   // Save the empty state

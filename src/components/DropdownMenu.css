@@ -1,0 +1,68 @@
+.settings-menu {
+    position: relative;
+    width: 250px;
+  }
+  
+  .settings-button {
+    padding: 0.5rem 1rem;
+    background-color: rgba(255, 16, 175, 0.87);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .settings-dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 0.5rem;
+    z-index: 1000;
+    min-width: 200px;
+  }
+  
+  .danger-button {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    background-color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #ff4444;
+    text-align: left;
+    transition: background-color 0.2s;
+  }
+  
+  .danger-button:hover {
+    background-color: #fff0f0;
+  }
+  
+  /* Optional: Add a small arrow to the dropdown */
+  .settings-dropdown::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 16px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #ddd;
+  }
+  
+  .settings-dropdown::after {
+    content: '';
+    position: absolute;
+    top: -7px;
+    right: 16px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid white;
+  }
+  

@@ -2,6 +2,7 @@ import './App.css'
 import { useState, useEffect } from 'react'
 import Counter from './components/Counter'
 import NewCounter from './components/NewCounter';
+import SettingsMenu from './components/DropdownMenu';
 
 interface CounterData {
   id: number;
@@ -145,13 +146,8 @@ useEffect(() => {
 
   return (
     <>
+      <SettingsMenu onClearCounters={handleClearCounters} />
       <h1>I LOVE HANNAH HANNAH IS AMAZING AND CUTE AND FUN</h1>
-      <button 
-          onClick={handleClearCounters}
-          className="clear-button"
-        >
-          Clear All Counters
-        </button>
       <div className='global-counter xl-font xl-gap bg-pink'>
         <div className="counter-controls">
           <button onClick={handleClickDecreaseGlobal}>

@@ -80,7 +80,7 @@ const handleClearCounters = async () => {
       id: Date.now(),
       name: name,
       targetNumber: target,
-      currentCount: 0,
+      currentCount: 1,
       totalRows: 0
     };
     

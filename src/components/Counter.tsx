@@ -16,7 +16,7 @@ const Counter: React.FC<CounterProps> = ({
   onGlobalDecrement, 
   onGlobalIncrement,
   onCounterUpdate,
-  initialCount = 0,
+  initialCount = 1,
   initialTotalRows = 0
 }) => {
   const [count, setCount] = useState(initialCount);
@@ -24,11 +24,11 @@ const Counter: React.FC<CounterProps> = ({
 
   const handleIncrement = () => {
     const newCount = count + 1;
-    if (newCount === targetNumber) {
-      setCount(0);
+    if (newCount === targetNumber + 1) {
+      setCount(1);
       const newTotalRows = totalRows + 1;
       setTotalRows(newTotalRows);
-      onCounterUpdate(0, newTotalRows);
+      onCounterUpdate(1, newTotalRows);
     } else {
       setCount(newCount);
       onCounterUpdate(newCount, totalRows);
@@ -37,11 +37,11 @@ const Counter: React.FC<CounterProps> = ({
   };
 
   const handleDecrement = () => {
-    if (count > 0) {
+    if (count > 1) {
       const newCount = count - 1;
       setCount(newCount);
       onCounterUpdate(newCount, totalRows);
-    } else if (count === 0 && totalRows > 0) {
+    } else if (count === 1 && totalRows > 0) {
       const newTotalRows = totalRows - 1;
       setTotalRows(newTotalRows);
       onCounterUpdate(count, newTotalRows);
